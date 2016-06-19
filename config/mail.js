@@ -1,6 +1,6 @@
 'use strict';
 
-exports.sendVerify = function() {
+exports.sendVerify = () => {
 
   let helper = require('sendgrid').mail;
   let from_email = new helper.Email("ysangy@gmail.com");
