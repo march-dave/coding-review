@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/d3/d3.js"></script>
+  <script src="bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+  <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+  <link rel='stylesheet' href='/css/style.css' />
+
+  <!-- bower_components/d3/d3.js -->
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <nvd3 options="options" data="data"></nvd3>
+  <!-- <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p> -->
+</body>
 </html>

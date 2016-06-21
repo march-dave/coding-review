@@ -3,8 +3,8 @@
 exports.sendVerify = () => {
 
   let helper = require('sendgrid').mail;
-  let from_email = new helper.Email("ysangy@gmail.com");
-  let to_email = new helper.Email("ysangy@gmail.com");
+  let from_email = new helper.Email("dac.davelee@gmail.com");
+  let to_email = new helper.Email("dac.davelee@gmail.com");
   let subject = "I am subject";
   let content = new helper.Content("text/plain", "I am text");
   let mail = new helper.Mail(from_email, subject, to_email, content);
