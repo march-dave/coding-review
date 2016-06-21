@@ -2,6 +2,8 @@
 
 require('dotenv').load();
 
+const PORT = process.env.PORT || 3000;
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -11,6 +13,13 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+
+const mongoose = require("mongoose");
+const MONGOURL = process.env.MONGODB_URI || `mongodb://localhost/jobrmApp`;
+
+mongoose.connect(MONGOURL, function (error) {
+    console.log(error || `Connected to MongoDB at ${MONGOURL}`);
+});
 
 var app = express();
 
@@ -27,6 +36,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/api', require('./routes/api'));
 app.use('/users', users);
 
 // catch 404 and forward to error handler
