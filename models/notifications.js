@@ -3,12 +3,8 @@
 const mongoose = require("mongoose");
 
 let userSchema = new mongoose.Schema({
-    email: {
-        type: String
-    },
-    name: {
-        type: String
-    },
+    email: { type: String },
+    name: { type: String },
     applications: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Application"
@@ -26,7 +22,6 @@ userSchema.statics.saveGmailUser = (user, cb) => {
         let newUser = new User({
             email: user.email,
             name:  user.name
-
         });
 
         let sendmail = {
