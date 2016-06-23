@@ -8,3 +8,11 @@ router.post('/', (req, res) => {
     //     res.status(err ? 400: 200).send(err || savedUser);
     // });
 });
+
+router.get('/', (req, res) => {
+
+});
+
+router.get('/:id', (req, res) => {
+
+});
