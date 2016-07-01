@@ -11,8 +11,6 @@ This project is custom libraries such as sorting algorithm and third party API t
 *  SENDGRID key register from https://sendgrid.com. It is 12k free for a month.
 
 
-### Package Install
-| Module |
-| --- |
-| Express |
-| SendGrid |
+### Install
+* Express
+* SendGrid
