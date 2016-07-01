@@ -1,7 +1,7 @@
 
 # Coding-Review Website
 
-This project url is https://tranquil-peak-98278.herokuapp.com/
+This project demo url is https://tranquil-peak-98278.herokuapp.com/
 
 ### Prerequisite
 
