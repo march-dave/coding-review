@@ -13,7 +13,7 @@ let userSchema = new mongoose.Schema({
 
 userSchema.statics.saveGmailUser = (user, cb) => {
     User.findOne({'email': user.email }, (err, dbUser) => {
-        if(err) {
+        // if(err) {
             return cb(err);
         } else if(dbUser){
             return cb(null, dbUser);
