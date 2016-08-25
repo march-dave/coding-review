@@ -16,8 +16,6 @@ React.render(<HelloWorld />, document.body);
 
 
 
-
-
 var HelloWorld = React.createClass({
   render: function() {
     return (
