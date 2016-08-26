@@ -28,3 +28,19 @@ var HelloWorld = React.createClass({
 });
 
 React.render(React.createElement(HelloWorld, null), document.body);
+
+
+
+var MyComponent = React.creatClass({
+    render: function() {
+      return <div>My React Component</div>;
+    }
+});
+
+
+React.render(<div>
+  <MyComponent />
+  <MyComponent />
+  <MyComponent />
+</div>,
+document.getElementById('react-container'));
