@@ -1,0 +1,10 @@
+var hero = {
+  _name: "John Doe",
+
+  getSecretIdentity: function() {
+    return this.name;
+  }
+};
+
+var stolen =
+hero.getSecretIdentity.bind(hero);
