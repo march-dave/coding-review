@@ -1,0 +1,70 @@
+<!-- Enter your HTML code here -->
+
+<!-- Use the API to dynamically get the list of countries in the world using Javascript and Ajax. Of the countries tied for shortes name, display the 5 with the largest popluations, each as a blue square box with the country name. When the user clicks on any country's box the country's square should become red, and you should query the API using ajax to retrieve the country's overall, male, and female population of current (ie as of 2016) 18 years olds. There three populations should be added and displayed within the country's display box.
+
+You should not hard-code anything. Your soultion should solve the entire problem dynamically using Javascript, JQuery, and Ajax -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Countries, Ajax, and APIs OH MY!</title>
+
+    <script>
+        $(document).ready(init);
+
+        function init() {
+              getPopulation();
+        }
+
+       $.ajax({
+          url: url,
+          method: 'GET',
+          success: function(data){
+            console.debug('Response:');
+            console.debug(data);
+          },
+          dataType: "jsonp"
+      });
+
+
+        function getPopulation() {
+            var settings = {
+                url: "https://population.simonsfoundation.org/test/",
+                method: 'GET',
+                success: function(data){
+                //   console.debug('Response:');
+                  console.debug(data);
+                },
+                dataType: "jsonp"
+            }
+        //   var settings = {
+        //     "async": true,
+        //     "dataType": "jsonp",
+        //     "crossDomain": true,
+        //     "url": "http://api.population.io:80/1.0/countries",
+        //     "method": "GET",
+        //     "headers": {
+        //       "cache-control": "no-cache"
+        //     }
+        //   }
+
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+          });
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+
+<div id="app">Good luck!</div>
+</body>
+</html>
